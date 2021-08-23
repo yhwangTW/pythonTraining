@@ -20,8 +20,7 @@ class Fraction:
         print(self.num, "/", self.den)
 
     def __add__(self, otherfraction):
-        newnum = self.num*otherfraction.den + \
-            self.den*otherfraction.num
+        newnum = self.num*otherfraction.den + self.den*otherfraction.num
         newden = self.den * otherfraction.den
         common = gcd(newnum, newden)
         return Fraction(newnum//common, newden//common)
@@ -29,7 +28,6 @@ class Fraction:
     def __eq__(self, other):
         firstnum = self.num * other.den
         secondnum = other.num * self.den
-
         return firstnum == secondnum
 
 
